@@ -50,18 +50,18 @@ India has a three-layer healthcare crisis that **no existing platform solves sim
 📸 Report suspicious medicine  →  🗺️ Community counterfeit heatmap  →  📢 District-level alerts
 ```
 
-### Core Features *(Currently in active development)*
+### Core Features _(Currently in active development)_
 
-| Feature                       | Description                                                   | Status     |
-| ----------------------------- | ------------------------------------------------------------- | ---------- |
-| 🔍 **Medicine Scanner**       | Scan barcode/QR → verify against CDSCO database               | 🚧 Building|
-| 🖼️ **AI Image Analysis**      | Cloudinary-powered packaging comparison (real vs fake visual) | 🔜 Planned |
-| 🗣️ **Voice Health Assistant** | Symptoms in 22 Indian languages via Whisper + Sarvam AI       | 🔜 Planned |
-| 🗺️ **Pharmacy & ASHA Map**    | Verified Jan Aushadhi stores + ASHA workers via PostGIS       | 🔜 Planned |
-| 📊 **Counterfeit Heatmap**    | Community-reported fake medicines aggregated by district      | 🔜 Planned |
-| 🤖 **CDSCO Alert Agent**      | Autonomous agent monitoring CDSCO drug recalls every 6h       | 🔜 Planned |
-| 📶 **Offline-First PWA**      | Works without internet after first load (Workbox)             | 🔜 Planned |
-| 🆓 **100% Free**              | No ads, no premium plan, no data sold. Ever.                  | ✅ Always  |
+| Feature                       | Description                                                   | Status      |
+| ----------------------------- | ------------------------------------------------------------- | ----------- |
+| 🔍 **Medicine Scanner**       | Scan barcode/QR → verify against CDSCO database               | 🚧 Building |
+| 🖼️ **AI Image Analysis**      | Cloudinary-powered packaging comparison (real vs fake visual) | 🔜 Planned  |
+| 🗣️ **Voice Health Assistant** | Symptoms in 22 Indian languages via Whisper + Sarvam AI       | 🔜 Planned  |
+| 🗺️ **Pharmacy & ASHA Map**    | Verified Jan Aushadhi stores + ASHA workers via PostGIS       | 🔜 Planned  |
+| 📊 **Counterfeit Heatmap**    | Community-reported fake medicines aggregated by district      | 🔜 Planned  |
+| 🤖 **CDSCO Alert Agent**      | Autonomous agent monitoring CDSCO drug recalls every 6h       | 🔜 Planned  |
+| 📶 **Offline-First PWA**      | Works without internet after first load (Workbox)             | 🔜 Planned  |
+| 🆓 **100% Free**              | No ads, no premium plan, no data sold. Ever.                  | ✅ Always   |
 
 ---
 
@@ -70,24 +70,24 @@ India has a three-layer healthcare crisis that **no existing platform solves sim
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                     CLIENT (PWA)                            │
-│  Next.js 14 · Tailwind CSS · Workbox · ZXing · Leaflet.js  │
+│  Next.js 14 · Tailwind CSS · Workbox · ZXing · Leaflet.js   │
 └─────────────────────┬───────────────────────────────────────┘
                       │ HTTPS
 ┌─────────────────────▼───────────────────────────────────────┐
-│                  API GATEWAY                                 │
+│                  API GATEWAY                                │
 │         Node.js · Express · TypeScript · Redis              │
 └──────────┬─────────────────────────────┬────────────────────┘
            │                             │
 ┌──────────▼──────────┐    ┌─────────────▼──────────────────┐
-│    ML SERVICE       │    │        DATABASE                 │
+│    ML SERVICE       │    │        DATABASE                │
 │  FastAPI · Python   │    │  PostgreSQL · PostGIS · pgvec  │
 │  OpenCV · TF Lite   │    │  Supabase · Cloudinary CDN     │
 │  Whisper · LangChain│    └────────────────────────────────┘
 └─────────────────────┘
            │
 ┌──────────▼──────────────────────────────────────────────────┐
-│                    AI AGENT (Autonomous)                     │
-│     LangChain · Sarvam AI · CDSCO Poller · Push Notif      │
+│                    AI AGENT (Autonomous)                    │
+│     LangChain · Sarvam AI · CDSCO Poller · Push Notif       │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -314,27 +314,27 @@ SahiDawa aims to support all 22 Indian scheduled languages. (We are just getting
 | Language           | Status         | Contributor           |
 | ------------------ | -------------- | --------------------- |
 | English            | 🚧 In Progress | Core Team             |
-| Hindi (हिन्दी)     | 🔜 Open        | [Claim this issue](#) |
-| Tamil (தமிழ்)      | 🔜 Open        | [Claim this issue](#) |
-| Telugu (తెలుగు)    | 🔜 Open        | [Claim this issue](#) |
-| Kannada (ಕನ್ನಡ)    | 🔜 Open        | [Claim this issue](#) |
-| Malayalam (മലയാളം) | 🔜 Open        | [Claim this issue](#) |
-| Bengali (বাংলা)    | 🔜 Open        | [Claim this issue](#) |
-| Gujarati (ગુજરાતી) | 🔜 Open        | [Claim this issue](#) |
-| Marathi (मराठी)    | 🔜 Open        | [Claim this issue](#) |
-| Punjabi (ਪੰਜਾਬੀ)   | 🔜 Open        | [Claim this issue](#) |
-| Odia (ଓଡ଼ିଆ)       | 🔜 Open        | [Claim this issue](#) |
-| Assamese (অসমীয়া) | 🔜 Open        | [Claim this issue](#) |
-| Urdu (اردو)        | 🔜 Open        | [Claim this issue](#) |
-| Sanskrit (संस्कृत) | 🔜 Open        | [Claim this issue](#) |
-| Maithili           | 🔜 Open        | [Claim this issue](#) |
-| Kashmiri           | 🔜 Open        | [Claim this issue](#) |
-| Konkani            | 🔜 Open        | [Claim this issue](#) |
-| Sindhi             | 🔜 Open        | [Claim this issue](#) |
-| Dogri              | 🔜 Open        | [Claim this issue](#) |
-| Bodo               | 🔜 Open        | [Claim this issue](#) |
-| Manipuri           | 🔜 Open        | [Claim this issue](#) |
-| Santali            | 🔜 Open        | [Claim this issue](#) |
+| Hindi (हिन्दी)     | 🔜 Open        | —                     |
+| Tamil (தமிழ்)      | 🔜 Open        | —                     |
+| Telugu (తెలుగు)    | 🔜 Open        | —                     |
+| Kannada (ಕನ್ನಡ)    | 🔜 Open        | —                     |
+| Malayalam (മലയാളം) | 🔜 Open        | —                     |
+| Bengali (বাংলা)    | 🔜 Open        | —                     |
+| Gujarati (ગુજરાતી) | 🔜 Open        | —                     |
+| Marathi (मराठी)    | 🔜 Open        | —                     |
+| Punjabi (ਪੰਜਾਬੀ)   | 🔜 Open        | —                     |
+| Odia (ଓଡ଼ିଆ)       | 🔜 Open        | —                     |
+| Assamese (অসমীয়া) | 🔜 Open        | —                     |
+| Urdu (اردو)        | 🔜 Open        | —                     |
+| Sanskrit (संस्कृत) | 🔜 Open        | —                     |
+| Maithili           | 🔜 Open        | —                     |
+| Kashmiri           | 🔜 Open        | —                     |
+| Konkani            | 🔜 Open        | —                     |
+| Sindhi             | 🔜 Open        | —                     |
+| Dogri              | 🔜 Open        | —                     |
+| Bodo               | 🔜 Open        | —                     |
+| Manipuri           | 🔜 Open        | —                     |
+| Santali            | 🔜 Open        | —                     |
 
 ---
 
