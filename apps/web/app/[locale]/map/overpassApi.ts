@@ -5,9 +5,11 @@
  */
 
 const OVERPASS_MIRRORS = [
-    "https://overpass.osm.ch/api/interpreter",
-    "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.private.coffee/api/interpreter",
     "https://overpass-api.de/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+    "https://lz4.overpass-api.de/api/interpreter",
+    "https://z.overpass-api.de/api/interpreter",
 ];
 
 async function queryOverpass(query: string): Promise<any> {
@@ -20,6 +22,9 @@ async function queryOverpass(query: string): Promise<any> {
             const url = `${mirror}?data=${encodeURIComponent(query)}`;
             const response = await fetch(url, {
                 method: "GET",
+                headers: {
+                    Accept: "*/*",
+                },
                 signal: controller.signal,
             });
 
