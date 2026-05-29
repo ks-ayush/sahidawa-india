@@ -7,9 +7,16 @@ import { useState, useRef, useEffect } from "react";
 
 const languages = [
   { code: "en", label: "English", native: "English" },
+  { code: "hi", label: "Hindi", native: "हिन्दी" },
   { code: "ta", label: "Tamil", native: "தமிழ்" },
   { code: "bn", label: "Bengali", native: "বাংলা" },
-  { code: "te", label: "Telugu", native: "తెలుగు" }
+  { code: "te", label: "Telugu", native: "తెలుగు" },
+  { code: "mr", label: "Marathi", native: "मराठी" },
+  { code: "gu", label: "Gujarati", native: "ગુજરાતી" },
+  { code: "ur", label: "Urdu", native: "اردو" },
+  { code: "od", label: "Odia", native: "ଓଡ଼ିଆ" },
+  { code: "kn", label: "Kannada", native: "ಕನ್ನಡ" },
+  { code: "pa", label: "Punjabi", native: "ਪੰਜਾਬੀ" }
 ];
 
 export default function LanguageSwitcher() {
@@ -76,19 +83,16 @@ export default function LanguageSwitcher() {
           language-switcher-btn
           flex items-center gap-2
           rounded-full
-          border border-slate-200
-          bg-slate-100
+          border border-(--color-border-muted)
+          bg-(--color-surface-muted)
           px-3 py-2
           text-sm font-semibold
-          text-slate-700
+          text-(--color-text-primary)
           shadow-sm
           transition-all duration-200
-          hover:bg-slate-200
+          hover:bg-(--color-border-muted)
           hover:shadow-md
-          dark:border-slate-700
-          dark:bg-slate-800
-          dark:text-slate-200
-          dark:hover:bg-slate-700
+          sm:h-10 sm:px-4 sm:py-2
         "
       >
         <Globe
@@ -118,15 +122,12 @@ export default function LanguageSwitcher() {
           id="language-dropdown"
           role="listbox"
           className="
-            language-dropdown
-            absolute right-0 z-50 mt-2
+            absolute right-0 mt-2 z-50
             w-44 overflow-hidden
             rounded-2xl
-            border border-slate-200
-            bg-white
-            shadow-xl
-            dark:border-slate-700
-            dark:bg-slate-900
+            border border-(--color-border-muted)
+            bg-(--color-surface-page)
+            shadow-lg
           "
         >
           {languages.map((lang) => {
@@ -139,22 +140,21 @@ export default function LanguageSwitcher() {
                 onClick={() => switchLanguage(lang.code)}
                 aria-label={`Switch language to ${lang.label}`}
                 className={`
-                  language-option
                   flex w-full items-center justify-between
                   px-4 py-3
                   text-left text-sm font-medium
-                  transition-all duration-200
+                  transition-colors duration-200
                   ${
                     isActive
-                      ? "bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300"
-                      : "text-slate-700 hover:bg-slate-100 dark:text-slate-200 dark:hover:bg-slate-800"
+                      ? "bg-emerald-50 dark:bg-emerald-950/20 text-emerald-700 dark:text-emerald-400"
+                      : "text-(--color-text-primary) hover:bg-emerald-50 dark:hover:bg-emerald-950/20 hover:text-emerald-700 dark:hover:text-emerald-400"
                   }
                 `}
               >
                 <div className="flex flex-col">
                   <span>{lang.native}</span>
 
-                  <span className="text-xs text-slate-500 dark:text-slate-400">
+                  <span className="text-xs opacity-70">
                     {lang.label}
                   </span>
                 </div>

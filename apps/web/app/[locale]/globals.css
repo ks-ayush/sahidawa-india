@@ -281,7 +281,7 @@
     background: var(--color-text-secondary);
 }
 
-/*S Language Switcher Accessibility + UX */
+/* Language Switcher Accessibility + UX */
 
 .language-switcher-btn:focus-visible,
 .language-option:focus-visible {
