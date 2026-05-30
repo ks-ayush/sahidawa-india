@@ -173,9 +173,10 @@ export default function SahiDawaHome() {
                     </div>
                 </div>
             </header>
+
             {/* ── Main ── */}
             <main className="pb-24 md:pb-12">
-                {/* ── Sleek Integrated Console Header ── */}
+                {/* ── Hero Section ── */}
                 <section className="relative z-10 mx-auto max-w-4xl space-y-6 px-4 pt-10 pb-6 text-center">
                     {/* Badge */}
                     <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 text-[10px] font-extrabold tracking-widest text-emerald-600 uppercase dark:border-emerald-400/20 dark:text-emerald-400">
@@ -203,55 +204,11 @@ export default function SahiDawaHome() {
                     <div className="mx-auto w-full max-w-2xl pt-2">
                         <SearchBar />
                     </div>
-                    <ChevronRight
-                        size={32}
-                        className="relative z-10 hidden shrink-0 text-emerald-200 opacity-50 transition-all group-hover:translate-x-2 group-hover:opacity-100 sm:block"
-                    />
-                </button>
+                </section>
 
-
-<Link
-  href="/vaccine-hub"
-  className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-emerald-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md"
->
-  <div>
-    {/* Icon Container */}
-    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 transition-colors group-hover:bg-emerald-600 group-hover:text-white">
-      <Syringe size={24} />
-    </div>
-
-    {/* Text Context */}
-    <h3 className="mt-4 text-lg font-bold text-slate-900">
-      Vaccine Hub & Tracker
-    </h3>
-    <p className="mt-2 text-sm leading-relaxed text-slate-500">
-      Check customized national immunization schedules, view critical side effects, and track milestone execution timelines.
-    </p>
-  </div>
-
-  {/* Action Footer Indicator */}
-  <div className="mt-6 flex items-center gap-1.5 text-sm font-bold text-emerald-600">
-    <span>Open Tracker</span>
-    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
-  </div>
-</Link>
-
-                {/* ── Secondary Action Cards ── */}
-                <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
-                    {/* Upload Photo */}
-                    <button
-                        onClick={() => handleNavigation("scan")}
-                        className="group flex min-h-[170px] w-full flex-col justify-between overflow-hidden rounded-3xl border border-(--color-border-muted) bg-(--color-surface-page)/95 p-6 text-left shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-400/50 hover:shadow-xl active:scale-[0.99]"
-                        aria-label="Upload photo"
-                    >
-                        <div className="flex items-start justify-between gap-4">
-                            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 text-emerald-600 ring-1 ring-white/60 transition-colors duration-300 ring-inset group-hover:bg-emerald-500 group-hover:text-white dark:bg-emerald-950/30 dark:text-emerald-400 dark:ring-white/10">
-                                <Camera size={28} strokeWidth={2.5} />
-                            </div>
-                            <ChevronRight className="mt-1 h-5 w-5 text-slate-300 transition-all duration-300 group-hover:translate-x-1 group-hover:text-emerald-400" />
-                        </div>
-
+                {/* ── Content Container ── */}
                 <div className="container mx-auto max-w-6xl px-4">
+
                     {/* ── Primary Action: Scan Medicine ── */}
                     <section className="mt-4 mb-10">
                         <button
@@ -286,12 +243,43 @@ export default function SahiDawaHome() {
                         </button>
                     </section>
 
+
+                    {/* ── Vaccine Hub & Tracker ── */}
+<section className="mb-6">
+  <Link
+  href="/vaccine-hub"
+  className="group relative flex flex-col justify-between overflow-hidden rounded-2xl border border-emerald-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-emerald-200 hover:shadow-md"
+>
+  <div>
+    {/* Icon Container */}
+    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 transition-colors group-hover:bg-emerald-600 group-hover:text-white">
+      <Syringe size={24} />
+    </div>
+
+    {/* Text Context */}
+    <h3 className="mt-4 text-lg font-bold text-slate-900">
+      Vaccine Hub & Tracker
+    </h3>
+    <p className="mt-2 text-sm leading-relaxed text-slate-500">
+      Check customized national immunization schedules, view critical side effects, and track milestone execution timelines.
+    </p>
+  </div>
+
+  {/* Action Footer Indicator */}
+  <div className="mt-6 flex items-center gap-1.5 text-sm font-bold text-emerald-600">
+    <span>Open Tracker</span>
+    <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+  </div>
+</Link>
+
+</section>
+
+
                     {/* ── Explore Features Section ── */}
                     <section className="mb-16">
-                        <h2 className="mb-8 bg-linear-to-r from-slate-700 to-slate-500 bg-clip-text text-center text-3xl font-bold tracking-tighter text-transparent dark:from-slate-200 dark:to-slate-400">
-                            Explore Features
-                        </h2>
+                       
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
                             {/* Upload Photo */}
                             <button
                                 onClick={() => handleNavigation("scan")}
@@ -458,6 +446,7 @@ export default function SahiDawaHome() {
                                     </p>
                                 </div>
                             </button>
+
                         </div>
                     </section>
 
@@ -508,8 +497,6 @@ export default function SahiDawaHome() {
                             </button>
                         </div>
                     </div>
-
-                    {/* Global Search moved to Hero */}
 
                     {/* ── Live Alerts Panel (full-width) ── */}
                     <div className="mt-10 mb-16">
@@ -642,6 +629,7 @@ export default function SahiDawaHome() {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </main>
 
